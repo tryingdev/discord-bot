@@ -29,7 +29,7 @@ async def on_message(message):
             print(f"Erro ao executar o script VBS: {e}")
 
     # Exemplo de uso
-    caminho_script = configesmeralda.vbs
+    caminho_script = 'configesmeralda.vbs'
 
     def ler_arquivo_xls(nome_arquivo):
         # Lê o arquivo XLS
