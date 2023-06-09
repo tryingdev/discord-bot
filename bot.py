@@ -28,7 +28,7 @@ async def on_message(message):
         return texto
 
     # Nome do arquivo XLS a ser lido
-    nome_arquivo = r"\\10.0.0.250\Publica\FATURAMENTO\exames.xlsx"
+    nome_arquivo = "exames.xlsx"
 
     # Chama a função para ler o arquivo e obter o texto
     texto_arquivo = ler_arquivo_xls(nome_arquivo)
