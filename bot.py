@@ -1,10 +1,7 @@
 import discord
-from key import token, passwords, diretorio_publico
+from key import token
 import pandas as pd
 import subprocess
-
-sasfal = passwords
-pasta = diretorio_publico
 
 intents = discord.Intents.default()
 intents.message_content = True
