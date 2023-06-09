@@ -18,8 +18,22 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return
+        def ler_arquivo_xls(nome_arquivo):
+        # Lê o arquivo XLS
+        df = pd.read_excel(nome_arquivo)
 
-    if message.content.startswith('/examespardini'):
+        # Converte o conteúdo em texto
+        texto = df.to_string(index=False)
+
+        return texto
+
+    # Nome do arquivo XLS a ser lido
+    nome_arquivo = "exames.xlsx"
+
+    # Chama a função para ler o arquivo e obter o texto
+    texto_arquivo = ler_arquivo_xls(nome_arquivo)
+    
+    if message.content.startswith('/exames'):
         ler_arquivo_xls(nome_arquivo)
         await message.channel.send(texto_arquivo)
 
